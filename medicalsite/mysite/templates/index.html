@@ -1,0 +1,16 @@
+{% if course_details %}
+    <table>
+        
+    {% for courses in course_details %}
+    <tr>
+        <td>
+            {% load static %}
+            <a href="{{courses.filePath.url}}" target="_blank">pdf</a></td>
+        <td>{{courses.cateogry}}</td>
+    </tr>
+    {% endfor %}
+       
+{% else %}
+    <p>No polls are available.</p>
+</table>
+{% endif %}
